@@ -1,0 +1,80 @@
+
+Theme:pytorch-audioclassification-master
+
+Date:2022/7/15/20:46:57
+
+Time used:0:00:27.147119
+
+workplace:D:\PythonCode\Pytorch-AudioClassification-master\tools
+
+folder information:
++--------------------------+-------------------+-------------------+------------+
+|    number of samples     |    train number   |    valid number   |  percent   |
++--------------------------+-------------------+-------------------+------------+
+|           4500           |        4050       |        450        |    0.9     |
++--------------------------+-------------------+-------------------+------------+
+
+classes:
++-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
+|  0  |  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |
++-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
+|  0  |  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |
++-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
+
+training device:
++--------------------+-------------------------+---------------------------------+
+|   number of gpu    |    applied gpu index    |         applied gpu name        |
++--------------------+-------------------------+---------------------------------+
+|         1          |            0            |     NVIDIA GeForce RTX 2060     |
++--------------------+-------------------------+---------------------------------+
+
+training basic configuration:
++------------------------------------+------------+-------+---------------+----------------------------------------------------------+
+|               theme                | batch size | epoch | learning rate |                     directory of log                     |
++------------------------------------+------------+-------+---------------+----------------------------------------------------------+
+| pytorch-audioclassification-master |     16     |   5   |     0.001     | D:\PythonCode\Pytorch-AudioClassification-master\workdir |
++------------------------------------+------------+-------+---------------+----------------------------------------------------------+
+
+Optimizer:
+Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    lr: 0.001
+    weight_decay: 0
+)
+
+Model:
+AudioClassificationModel(
+  (conv1): Conv2d(2, 8, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2))
+  (relu1): ReLU()
+  (bn1): BatchNorm2d(8, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (conv2): Conv2d(8, 16, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+  (relu2): ReLU()
+  (bn2): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (conv3): Conv2d(16, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+  (relu3): ReLU()
+  (bn3): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (conv4): Conv2d(32, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+  (relu4): ReLU()
+  (bn4): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (ap): AdaptiveAvgPool2d(output_size=1)
+  (classification): Linear(in_features=64, out_features=10, bias=True)
+  (conv): Sequential(
+    (0): Conv2d(2, 8, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2))
+    (1): ReLU()
+    (2): BatchNorm2d(8, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (3): Conv2d(8, 16, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+    (4): ReLU()
+    (5): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (6): Conv2d(16, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+    (7): ReLU()
+    (8): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (9): Conv2d(32, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+    (10): ReLU()
+    (11): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+)
+,
+    
